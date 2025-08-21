@@ -1,1 +1,1 @@
-Boostra Website :)
+Boostra Website

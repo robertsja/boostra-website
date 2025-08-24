@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    
+    <script src="js/main.js" defer="false"></script>
     <script type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 
     
@@ -27,9 +29,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="#success">Success Stories</a>
                     </li>
+                -->
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -61,36 +65,39 @@
         <div class="container py-5">
             <h2 class="text-center section-title mx-auto">Rapid Results, Real Impact</h2>
             <div class="row mt-5">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" onclick="showLeadShowcase()">
                     <div class="card p-4">
                         <div class="card-body text-center">
                             <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <i class="fas fa-brain text-primary fa-2x"></i>
+                                <i class="fas fa-rocket text-primary fa-2x"></i>
                             </div>
-                            <h4 class="card-title">AI Solutions</h4>
-                            <p class="card-text">Intelligent automation systems tailored to your business needs.</p>
+                            <h4 class="card-title">Lead Automations</h4>
+                            <p class="card-text">Smarter lead automation that saves time, cuts costs, and boosts conversions.</p>
+                            <p class="click-to-learn-more">Click to learn more</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" onclick="showSupportShowcase()">
                     <div class="card p-4">
                         <div class="card-body text-center">
                             <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <i class="fas fa-chart-line text-primary fa-2x"></i>
+                                <i class="fas fa-phone text-primary fa-2x"></i>
                             </div>
-                            <h4 class="card-title">Data Analytics</h4>
-                            <p class="card-text">Transform your data into actionable insights and strategies.</p>
+                            <h4 class="card-title">Support Automations</h4>
+                            <p class="card-text">Automated support that cuts response times and keeps customers satisfied around the clock.</p>
+                            <p class="click-to-learn-more">Click to learn more</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" onclick="showCustomShowcase()">
                     <div class="card p-4">
                         <div class="card-body text-center">
                             <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <i class="fas fa-cogs text-primary fa-2x"></i>
+                                <i class="fas fa-wrench text-primary fa-2x"></i>
                             </div>
-                            <h4 class="card-title">Process Optimization</h4>
-                            <p class="card-text">Streamline operations and maximize efficiency across your organization.</p>
+                            <h4 class="card-title">Custom Automations</h4>
+                            <p class="card-text">Tailored AI-powered workflows designed to automate your unique business processes and maximize efficiency</p>
+                            <p class="click-to-learn-more">Click to learn more</p>
                         </div>
                     </div>
                 </div>
@@ -98,8 +105,220 @@
         </div>
     </section>
 
+    <!-- Product Showcase Section (Hidden by default) -->
+    <section id="lead-showcase" class="lead-showcase">
+        <div class="container">
+            <div class="product-header">
+                <h2>Lead Automation Service Packages</h2>
+                <p class="lead">Choose the perfect solution for your business needs</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">📦</div>
+                    <h3 class="product-title">Lead Capture & Instant Alerts</h3>
+                    <p class="product-description">Automatically capture leads from your website forms, social ads, or booking tools and send them straight into your CRM.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Instant Slack/email alerts</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> CRM integration</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> 24/7 monitoring</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$300 setup + $100/month monitoring</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🤖</div>
+                    <h3 class="product-title">Smart Lead Enrichment & Scoring</h3>
+                    <p class="product-description">Enrich new leads with company/job data and have AI score them based on potential value.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> AI-powered lead scoring</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Company data enrichment</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Priority lead notification</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$500 setup + $150/month monitoring</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">✉️</div>
+                    <h3 class="product-title">AI-Personalized Outreach</h3>
+                    <p class="product-description">New leads automatically receive personalized intro emails or LinkedIn messages crafted by AI.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Personalized messaging</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Multi-channel outreach</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Adaptive content generation</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$700 setup + $250/month monitoring</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🔄</div>
+                    <h3 class="product-title">Full Lead Nurturing Funnel</h3>
+                    <p class="product-description">End-to-end automation for lead follow-up. AI drafts and sends drip emails, books meetings automatically.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Complete drip campaigns</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Automated meeting booking</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Hot lead routing</li>
+                    </ul>
+
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+
+                    <div class="product-pricing">
+                        <p class="product-price">$1,200 setup + $500/month monitoring</p>
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+
+
+            <button class="btn btn-primary close-products" onclick="hideLeadShowcase()">Close Services</button>
+        </div>
+    </section>
+
+    <section id="support-showcase" class="support-showcase">
+        <div class="container">
+            <div class="product-header">
+                <h2>Support Automation Service Packages</h2>
+                <p class="support">Choose the perfect solution for your business needs</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">⚡</div>
+                    <h3 class="product-title">Instant Ticket Triage</h3>
+                    <p class="product-description">Stop wasting hours sorting tickets. Our AI instantly categorizes, prioritizes, and routes incoming support requests to the right team or agent — reducing response times and preventing urgent issues from slipping through the cracks.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Prioritize urgent tickets automatically so no customer gets ignored </li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Categorize and route tickets to the right agent instantly</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Reduce response time and free up your support team</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$500 setup + $150/month monitoring</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🤖</div>
+                    <h3 class="product-title">AI Reply Assistant</h3>
+                    <p class="product-description">Empower your team with AI-generated draft replies inside your helpdesk. Tickets get intelligent first responses based on your knowledge base, saving reps 50% of response time while keeping the human touch in final approval.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Draft intelligent replies instantly based on your knowledge base</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Save your team 50% of manual response time</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Maintain a human-approved touch for personalized support</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$700 setup + $200/month monitoring</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">📚</div>
+                    <h3 class="product-title">Self-Service Smart FAQ's</h3>
+                    <p class="product-description">Turn your existing support docs into a 24/7 AI-powered help widget. Customers get instant answers without opening a ticket, cutting support volume and boosting satisfaction.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> 24/7 availability</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Instant responses</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Reduce ticket volume and lower support costs</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$700 setup + $250/month monitoring</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🎯</div>
+                    <h3 class="product-title">Proactive Customer Care</h3>
+                    <p class="product-description">Go beyond reactive support. Our automations detect churn signals (delays, repeated tickets, low satisfaction) and trigger proactive outreach — ensuring at-risk customers feel heard before they ever consider leaving.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Detect at-risk customers with AI monitoring signals</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Trigger automated outreach before issues escalate</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Improve customer retention and satisfaction</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">$1,500 setup + $400/month monitoring</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary close-products" onclick="hideSupportShowcase()">Close Services</button>
+        </div>
+    </section>
+
+    <section id="custom-showcase" class="custom-showcase">
+        <div class="container">
+            <div class="product-header">
+                <h2>Custom Automation Consults</h2>
+                <p class="custom">Choose the perfect solution for your business needs</p>
+            </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🪄</div>
+                    <h3 class="product-title">Custom Automation</h3>
+                    <p class="product-description">We work directly with your team to analyze your workflows, identify automation opportunities, and build tailored AI-powered processes that save time and increase efficiency.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Identify bottlenecks and repetitive tasks that can be automated</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Build workflows specific to your business needs for maximum impact</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Increase productivity, reduce errors, and free your team to focus on high-value work</li>
+                    </ul>
+                    
+                    <div class="temp">
+                        <p class="temp-product-price">Contact us for pricing</p>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <p class="product-price">Based on requirements</p>
+                    </div>
+                </div>
+            
+            <button class="btn btn-primary close-products" onclick="hideCustomShowcase()">Close Services</button>
+        </div>
+    </section>
+
     <!-- Experience Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-white">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -108,12 +327,12 @@
                     <div class="mt-5">
                         <div class="d-flex flex-wrap justify-content-center gap-5">
                             <div class="text-center">
-                                <h3 class="text-primary fw-bold">50%</h3>
+                                <h3 class="text-primary fw-bold">30%</h3>
                                 <p>Average Efficiency Increase</p>
                             </div>
                             <div class="text-center">
-                                <h3 class="text-primary fw-bold">3x</h3>
-                                <p>Faster Implementation</p>
+                                <h3 class="text-primary fw-bold">25%</h3>
+                                <p>Increased Capacity</p>
                             </div>
                             <div class="text-center">
                                 <h3 class="text-primary fw-bold">98%</h3>
@@ -127,7 +346,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="success" class="py-5">
+    <section id="success" class="py-5 background-dark">
         <div class="container py-5">
             <h2 class="text-center section-title mx-auto">Client Success Stories</h2>
             <div class="row mt-5">
@@ -168,34 +387,6 @@
             <h2 class="cta-title">Ready to Transform Your Business?</h2>
             <p class="mb-4">Join hundreds of companies that have accelerated their growth with our AI automation solutions.</p>
             <a href="#contact" class="btn btn-light btn-lg">Get Started Today</a>
-        </div>
-    </section>
-
-    <!-- Data Stream Section -->
-    <section class="py-5 bg-light">
-        <div class="container py-5 text-center">
-            <h2 class="section-title mx-auto">Data Stream</h2>
-            <p class="lead mb-5">Our proprietary data processing technology delivers real-time insights</p>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="bg-white rounded-3 p-4 shadow-sm">
-                        <div class="d-flex justify-content-between mb-4">
-                            <div>
-                                <h5>Real-time Analytics</h5>
-                                <p class="small text-muted">Live data processing</p>
-                            </div>
-                            <span class="badge bg-success">Active</span>
-                        </div>
-                        <div class="progress mb-4" style="height: 8px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
-                        </div>
-                        <div class="d-flex justify-content-between text-muted small">
-                            <span>Processing Speed</span>
-                            <span>2.4M records/sec</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 

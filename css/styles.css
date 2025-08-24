@@ -175,6 +175,16 @@ footer {
     padding: 3rem 0 2rem;
 }
 
+#mailto {
+    text-decoration: none;
+    color: white;
+}
+
+#mailto:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
 .social-link {
     display: inline-flex;
     align-items: center;

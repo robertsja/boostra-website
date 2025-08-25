@@ -281,6 +281,7 @@ footer {
 
 .product-features {
     margin-bottom: 1.5rem;
+    list-style: none;
 }
 
 .product-features li {

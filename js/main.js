@@ -59,3 +59,6 @@ function hideCustomShowcase() {
     // Scroll back to the services section
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
 }
+
+// Initialize by showing the lead showcase by default
+showLeadShowcase();

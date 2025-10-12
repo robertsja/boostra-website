@@ -14,10 +14,6 @@
 }
 
 .product-pricing {
-    display: none;
-}
-
-.temp-product-price {
     font-weight: 700;
     color: var(--primary);
     font-size: 1rem;
@@ -76,6 +72,12 @@ h1 {
 .section-title {
     font-weight: 700;
     margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title2 {
+    font-weight: 700;
     position: relative;
     padding-bottom: 1rem;
 }
@@ -334,7 +336,7 @@ footer {
   padding: 1rem;
 }
 .comparison-table thead {
-  background: #f9fafb;
+  background-color: var(--light);
 }
 .comparison-table th {
   font-weight: 600;

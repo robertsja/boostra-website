@@ -367,6 +367,70 @@ footer {
   font-weight: 600;
 }
 
+.bundle {
+    background: var(--gradient);
+    padding: 6rem 0 5rem;
+}
+
+.toggle-switch {
+  display: inline-flex;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    background: white;
+}
+
+.toggle-switch .toggle-button:hover{
+    cursor: pointer;
+    border: 1px solid var(--primary);
+}
+
+.lead-bundles, .support-bundles {
+    display: none;
+}
+
+.support-bundles.active {
+    display: block;
+}
+
+.lead-bundles.active {
+    display: block;
+}
+
+.highlight-text {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.bundle-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.bundle-note {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.7rem;
+}
+
+.save {
+    color: black;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
 
 @media (max-width: 768px) {
     h1 {

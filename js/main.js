@@ -85,6 +85,11 @@ function showSupportBundles() {
     document.getElementById('support-bundles').scrollIntoView({behavior: 'smooth'});
 }
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // Initialize by showing the lead showcase by default
 showLeadShowcase();
 showLeadBundles();
+scrollToTop();

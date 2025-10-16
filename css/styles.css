@@ -369,7 +369,6 @@ footer {
 
 .bundle {
     background: var(--gradient);
-    padding: 6rem 0 5rem;
 }
 
 .toggle-switch {
@@ -423,12 +422,6 @@ footer {
 .bundle-note {
     font-weight: 700;
     color: var(--primary);
-    font-size: 1.7rem;
-}
-
-.save {
-    color: black;
-    font-weight: 600;
     font-size: 1.7rem;
 }
 

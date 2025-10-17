@@ -286,11 +286,21 @@ footer {
     list-style: none;
 }
 
+.product-features1 {
+    margin-bottom: 1.5rem;
+    list-style: none;
+}
+
 .product-features li:last-child i {
     color: grey !important;
 }
 
 .product-features li {
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+.product-features1 li {
     margin-bottom: 0.5rem;
     color: var(--secondary);
 }
@@ -423,6 +433,44 @@ footer {
     font-weight: 700;
     color: var(--primary);
     font-size: 1.7rem;
+}
+
+.side-by-side {
+    display: flex;
+    gap: 40px; /* space between lists */
+}
+
+.boostra-bundle-card-title
+{
+    display: flex;
+    align-items: center;
+    
+    gap: 20px; /* space between icon and title */
+}
+
+.boostra-product-card {
+    background: white;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.side-by-side {
+    display: flex;
+    text-align: left;
+    gap: 40px; /* space between lists */
+}
+
+.boostra-product-card:hover {
+    transform: translateY(-5px);
+}
+
+.center-children{
+    width: 50%;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {

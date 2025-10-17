@@ -485,4 +485,8 @@ footer {
     .product-grid {
         grid-template-columns: 1fr;
     }
+
+    .center-children{
+        width: 100%;
+    }
 }

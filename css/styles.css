@@ -311,6 +311,11 @@ footer {
     font-size: 1.7rem;
 }
 
+.currency-label {
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
+}
+
 .product-pricing {
     
     padding: 0.5rem;

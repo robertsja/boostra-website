@@ -478,6 +478,94 @@ footer {
     margin: 0 auto;
 }
 
+/* Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-required {
+    color: #e74c3c;
+}
+
+.submit-button {
+    margin: 0 auto;
+    width: 75%;
+    
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.submit-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* center the submit button row only */
+.contact-form .form-group:last-child {
+    text-align: center;
+}
+
+.contact-form .submit-button {
+    display: inline-block;
+    width: 75%; /* use intrinsic width; change or remove to suit */
+    margin: 2rem;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;

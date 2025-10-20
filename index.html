@@ -567,7 +567,114 @@
                 <div class="col-lg-8">
                     
                         
-                <zapier-interfaces-page-embed page-id='cmelatifq0008kvmlkxifnyrk' no-background='true'  style='max-width: 100%; height: 1200px;'></zapier-interfaces-page-embed>
+                   <form id="contactForm" class="contact-form">
+                        <!-- Company Name -->
+                        <div class="form-group">
+                            <label for="companyName" class="form-label">
+                                Company Name <span class="form-required">*</span>
+                            </label>
+                            <input type="text" 
+                                id="companyName" 
+                                name="companyName" 
+                                class="form-input" 
+                                required>
+                        </div>
+
+                        <!-- Company Domain -->
+                        <div class="form-group">
+                            <label for="companyDomain" class="form-label">Company Domain</label>
+                            <input type="text" 
+                                id="companyDomain" 
+                                name="companyDomain" 
+                                class="form-input">
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">
+                                First Name <span class="form-required">*</span>
+                            </label>
+                            <input type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                class="form-input" 
+                                required>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">
+                                Last Name <span class="form-required">*</span>
+                            </label>
+                            <input type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                class="form-input" 
+                                required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email <span class="form-required">*</span>
+                            </label>
+                            <input type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" 
+                                id="phoneNumber" 
+                                name="phoneNumber" 
+                                class="form-input">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" 
+                                    name="message" 
+                                    class="form-textarea"></textarea>
+                        </div>
+
+                        <!-- Preferred Contact Method -->
+                        <div class="form-group">
+                            <label class="form-label">Preferred Contact Method</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" 
+                                        id="contactMobile" 
+                                        name="preferredContact" 
+                                        value="mobile" 
+                                        class="form-radio">
+                                    Mobile
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" 
+                                        id="contactEmail" 
+                                        name="preferredContact" 
+                                        value="email" 
+                                        class="form-radio" 
+                                        checked>
+                                    Email
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group">
+                            <button type="submit" 
+                                    id="submitButton" 
+                                    class="submit-button btn btn-primary">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
                         
                     
                 </div>

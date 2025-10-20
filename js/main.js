@@ -89,6 +89,47 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                companyName: document.getElementById('companyName').value,
+                companyDomain: document.getElementById('companyDomain').value,
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phoneNumber: document.getElementById('phoneNumber').value,
+                message: document.getElementById('message').value,
+                preferredContact: document.querySelector('input[name="preferredContact"]:checked').value,
+                dateTimeUTC: new Date().toISOString(),
+                dateTimeNZT: new Date().toLocaleString("en-NZ", { timeZone: "Pacific/Auckland" })
+            };
+
+            // Call webhook (replace with your actual webhook URL)
+            const webhookUrl = 'https://dev.boostra.co.nz/webhook/29ff0371-1859-40f9-9227-116ca71c93ad';
+            
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                    this.reset(); // Clear the form
+                } else {
+                    alert('Error submitting form. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting form. Please try again.');
+            });
+        });
+
 // Initialize by showing the lead showcase by default
 showLeadShowcase();
 showLeadBundles();

@@ -6,8 +6,64 @@
     --dark: #1e293b;
     --gradient: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     --white: #ffffff;
-}
 
+    /* Brand color palette (aligned with Boostra’s theme) */
+	--chat--color--primary: #2563eb; /* Matches --primary */
+	--chat--color--primary-shade-50: #1d4ed8; /* Matches --primary-dark */
+	--chat--color--primary--shade-100: #1e40af; /* Slightly darker shade */
+	--chat--color--secondary: #64748b; /* Matches Boostra’s secondary */
+	--chat--color-secondary-shade-50: #475569; /* Darker gray accent */
+	--chat--color-white: #ffffff;
+	--chat--color-light: #f8fafc; /* Matches Boostra’s light */
+	--chat--color-light-shade-50: #e2e8f0;
+	--chat--color-light-shade-100: #cbd5e1;
+	--chat--color-medium: #d2d4d9;
+	--chat--color-dark: #1e293b; /* Matches Boostra’s dark */
+	--chat--color-disabled: #94a3b8; /* Muted gray for disabled states */
+	--chat--color-typing: #334155;
+
+	/* Layout + appearance */
+	--chat--spacing: 1rem;
+	--chat--border-radius: 0.5rem;
+	--chat--transition-duration: 0.2s;
+
+	--chat--window--width: 400px;
+	--chat--window--height: 600px;
+
+	/* Header styling */
+	--chat--header-height: auto;
+	--chat--header--padding: var(--chat--spacing);
+	--chat--header--background: var(--chat--color--primary--shade-100);
+	--chat--header--color: var(--chat--color-light);
+	--chat--header--border-top: none;
+	--chat--header--border-bottom: none;
+	--chat--heading--font-size: 1.8em;
+	--chat--subtitle--font-size: inherit;
+	--chat--subtitle--line-height: 1.6;
+
+	/* Input area */
+	--chat--textarea--height: 50px;
+
+	/* Message bubbles */
+	--chat--message--font-size: 1rem;
+	--chat--message--padding: var(--chat--spacing);
+	--chat--message--border-radius: var(--chat--border-radius);
+	--chat--message-line-height: 1.6;
+	--chat--message--bot--background: var(--chat--color-white);
+	--chat--message--bot--color: var(--chat--color-dark);
+	--chat--message--bot--border: 1px solid var(--chat--color-light-shade-50);
+	--chat--message--user--background: var(--chat--color--primary);
+	--chat--message--user--color: var(--chat--color-white);
+	--chat--message--user--border: none;
+	--chat--message--pre--background: rgba(37, 99, 235, 0.05); /* light blue tint */
+
+	/* Floating button */
+	--chat--toggle--background: var(--chat--color--primary);
+	--chat--toggle--hover--background: var(--chat--color--primary-shade-50);
+	--chat--toggle--active--background: var(--chat--color--primary--shade-100);
+	--chat--toggle--color: var(--chat--color-white);
+	--chat--toggle--size: 64px;
+}
 /* These need to be removed once implemented correctly*/
 #success {
     display: none;

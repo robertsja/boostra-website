@@ -33,7 +33,7 @@
 	/* Header styling */
 	--chat--header-height: auto;
 	--chat--header--padding: var(--chat--spacing);
-	--chat--header--background: var(--chat--color--primary--shade-100);
+	--chat--header--background: var(--primary);
 	--chat--header--color: var(--chat--color-light);
 	--chat--header--border-top: none;
 	--chat--header--border-bottom: none;

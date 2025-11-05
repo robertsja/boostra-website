@@ -130,6 +130,24 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             });
         });
 
+// Fix for mobile position:fixed desync (especially iOS/Chrome)
+window.addEventListener('scroll', () => {
+  const chat = document.querySelector('.n8n-chat-toggle, #n8n-chat-toggle, .n8n-chat');
+  if (chat) {
+    chat.style.transform = 'translateY(0)'; // reset any visual offset
+    chat.style.position = 'fixed'; // force reflow
+  }
+});
+
+window.addEventListener('resize', () => {
+  const chat = document.querySelector('.n8n-chat-toggle, #n8n-chat-toggle, .n8n-chat');
+  if (chat) {
+    chat.style.transform = 'translateY(0)';
+    chat.style.position = 'fixed';
+  }
+});
+
+
 // Initialize by showing the lead showcase by default
 showLeadShowcase();
 showLeadBundles();

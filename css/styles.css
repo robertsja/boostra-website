@@ -64,6 +64,15 @@
 	--chat--toggle--color: var(--chat--color-white);
 	--chat--toggle--size: 80px;
 }
+
+.n8n-chat-toggle {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  transform: translateY(0) !important;
+  z-index: 999999 !important;
+  will-change: transform;
+}
 /* These need to be removed once implemented correctly*/
 #success {
     display: none;

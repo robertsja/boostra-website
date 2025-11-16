@@ -65,6 +65,21 @@
 	--chat--toggle--size: 80px;
 }
 
+.chatbot-wrapper {
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    z-index: 999999 !important;
+
+    /* Prevent iOS browser UI from affecting position */
+    transform: none !important;
+    will-change: auto !important;
+    pointer-events: none; /* clicks pass through except to the chatbot */
+  }
+  .chatbot-wrapper > * {
+    pointer-events: auto;
+  }
+
 .n8n-chat-toggle {
   position: fixed !important;
   bottom: 20px !important;

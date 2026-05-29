@@ -107,7 +107,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             };
 
             // Call webhook (replace with your actual webhook URL)
-            const webhookUrl = 'https://dev.boostra.co.nz/webhook/29ff0371-1859-40f9-9227-116ca71c93ad';
+            const webhookUrl = 'https://dev.boostra.co.nz/webhook/4ff30c6c-2479-4921-8d1f-63a8949f7bfe/chat';
             
             fetch(webhookUrl, {
                 method: 'POST',

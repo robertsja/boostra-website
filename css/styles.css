@@ -188,6 +188,26 @@ p { text-wrap: pretty; }
 }
 .navbar .nav-link:hover { color: var(--primary); background: rgba(37, 99, 235, 0.06); }
 .navbar .btn-primary { padding: 0.55rem 1.25rem; font-size: 0.95rem; }
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--green-600);
+    border: 1.5px solid var(--green-500);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.btn-login:hover {
+    color: var(--white);
+    background: var(--green-600);
+    border-color: var(--green-600);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(15,23,42,0.06), 0 14px 26px -10px rgba(22, 163, 74, 0.65);
+}
 
 /* ============================================================
    Hero — mesh gradient + chevron motif + floating logo
@@ -1345,6 +1365,201 @@ footer .text-center p { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
 .badge { background: var(--primary); color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem; }
 
 /* ============================================================
+   Client Dashboard Promo
+   ============================================================ */
+.dashboard-promo {
+    background: var(--mesh-bold);
+    background-image:
+        var(--pattern-chevrons-white),
+        var(--mesh-bold);
+    background-size: 56px 56px, auto;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-eyebrow-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+.section-eyebrow-light .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green-500);
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.28);
+}
+
+.dashboard-promo-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+
+.dashboard-promo-lead {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+}
+
+.dashboard-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.dashboard-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.97rem;
+    font-weight: 500;
+}
+.dashboard-feature-list li i {
+    width: 20px;
+    color: var(--teal-500);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.dashboard-cta {
+    font-weight: 600;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 8px 24px -8px rgba(255, 255, 255, 0.25);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.dashboard-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -8px rgba(255, 255, 255, 0.35);
+}
+
+/* Mock dashboard widget */
+.mock-dashboard {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.mock-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mock-dots { display: flex; gap: 0.4rem; }
+.mock-dot {
+    width: 11px; height: 11px; border-radius: 50%;
+}
+.md-red    { background: #ff5f57; }
+.md-yellow { background: #febc2e; }
+.md-green  { background: #28c840; }
+
+.mock-url-pill {
+    font-size: 0.73rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 0.2rem 0.8rem;
+    letter-spacing: 0.02em;
+}
+
+.mock-body { padding: 1.25rem; }
+
+.mock-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+.mock-tile {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    padding: 0.75rem;
+}
+.mock-tile-label {
+    font-size: 0.67rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0 0 0.3rem;
+}
+.mock-tile-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.3rem;
+    white-space: nowrap;
+}
+.mock-green { color: var(--green-500); }
+.mock-blue  { color: #60a5fa; }
+.mock-tile-delta {
+    font-size: 0.67rem;
+    font-weight: 500;
+    margin: 0;
+}
+.mock-up   { color: var(--green-500); }
+.mock-flat { color: rgba(255, 255, 255, 0.4); }
+
+.mock-automation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+.mock-automation-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.85rem;
+}
+.mock-status {
+    width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+}
+.mock-status.active {
+    background: var(--green-500);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.22);
+}
+.mock-automation-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    flex: 1;
+}
+.mock-automation-stat {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 992px) {
@@ -1366,4 +1581,6 @@ footer .text-center p { color: rgba(255,255,255,0.55); font-size: 0.88rem; }
     .d-flex.flex-wrap.justify-content-center.gap-5 > .text-center h3 { font-size: 2.4rem; }
     .side-by-side { gap: 1rem; flex-direction: column; }
     .contact-form { padding: 1.5rem; }
+    .dashboard-promo-title { font-size: 1.9rem; }
+    .mock-tiles { grid-template-columns: repeat(2, 1fr); }
 }

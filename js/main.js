@@ -89,6 +89,8 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
+
 document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -105,48 +107,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
                 dateTimeUTC: new Date().toISOString(),
                 dateTimeNZT: new Date().toLocaleString("en-NZ", { timeZone: "Pacific/Auckland" })
             };
-
-            // Call webhook (replace with your actual webhook URL)
-            const webhookUrl = 'https://dev.boostra.co.nz/webhook/4ff30c6c-2479-4921-8d1f-63a8949f7bfe/chat';
-            
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Form submitted successfully!');
-                    this.reset(); // Clear the form
-                } else {
-                    alert('Error submitting form. Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error submitting form. Please try again.');
-            });
-        });
-
-// Fix for mobile position:fixed desync (especially iOS/Chrome)
-window.addEventListener('scroll', () => {
-  const chat = document.querySelector('.n8n-chat-toggle, #n8n-chat-toggle, .n8n-chat');
-  if (chat) {
-    chat.style.transform = 'translateY(0)'; // reset any visual offset
-    chat.style.position = 'fixed'; // force reflow
-  }
-});
-
-window.addEventListener('resize', () => {
-  const chat = document.querySelector('.n8n-chat-toggle, #n8n-chat-toggle, .n8n-chat');
-  if (chat) {
-    chat.style.transform = 'translateY(0)';
-    chat.style.position = 'fixed';
-  }
-});
-
 
 // Initialize by showing the lead showcase by default
 showLeadShowcase();
